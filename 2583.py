@@ -17,7 +17,7 @@ def dfs(a, b):
     for i in range(4):
         nx = a + dx[i]
         ny = b + dy[i]
-        if 0 <= nx <= N-1 and 0 <= ny <= M-1 and board[ny][nx] == 0:
+        if N - 1 >= nx >= 0 == board[ny][nx] and 0 <= ny <= M-1:
             if check[ny][nx] == 0:
                 dfs(nx, ny)
 
