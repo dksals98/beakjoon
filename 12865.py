@@ -11,7 +11,7 @@ for i in range(1, N+1):
     for j in range(1, K+1):
         if things[i][0] > j:
             bag[i][j] = bag[i-1][j]
-        else :
+        else:
             bag[i][j] = max(bag[i-1][j], things[i][1] + bag[i-1][j-things[i][0]])
 
 print(bag[N][K])
